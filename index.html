@@ -158,14 +158,13 @@
 
 	function validateForm() {
   var x = document.getElementById("myInput").value;
-  if (x == "y") {
-    alert("Name must be filled out");
+  if (x == "") {
+    alert("Please select one of the inputs");
     return false;
   }
 	else{
-		// window.location.href = "apply2",true;
-		var y = document.getElementById("apply2");
-		y.scrollIntoView();
+		var nextQuestion = document.getElementById("apply2");
+		nextQuestion.scrollIntoView();
 	}
 }
 	</script>
@@ -235,8 +234,10 @@ function autocomplete(inp, arr) {
           /*and simulate a click on the "active" item:*/
           if (x) x[currentFocus].click();
         }
+
       }
   });
+
   function addActive(x) {
     /*a function to classify an item as "active":*/
     if (!x) return false;
