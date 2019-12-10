@@ -36,8 +36,8 @@
 	<script type="text/javascript">
 
 	function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
+  var x = document.getElementById("fname").value;
+  if (x == "y") {
     alert("Name must be filled out");
     return false;
   }
@@ -46,9 +46,6 @@
 
 </head>
 <body>
-	<section>
-
-	</section>
 
 
 	<!-- Navigation start -->
@@ -126,16 +123,16 @@
 					<!-- <input  type="text" autofocus="autofocus" class="validate"
 					checked
 					onKeyDown="if(event.keyCode==13) location.href='#apply4';" /> -->
-					<!-- <form name="myForm" action="/action_page.php" onsubmit="return validateForm()">
+					<form name="myForm" onsubmit="return validateForm()">
 						<div class="">
 								Name: <input type="text" name="fname">
 						</div>
 
-				</form> -->
+				</form>
 
-					<form autocomplete="off" name="myForm" onsubmit="return validateForm()" >
+					<form autocomplete="off">
 					  <div class="autocomplete" style="width:300px;">
-								<input id="myInput" type="text" name="fname" placeholder="i.e. Computer Science">
+								<input id="myInput" type="text" placeholder="i.e. Computer Science">
 					  </div>
 					</form>
 
