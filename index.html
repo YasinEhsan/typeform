@@ -17,7 +17,7 @@
 	<!-- Load materializecss -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-	<link href="assets/wow.min.js" rel="stylesheet" media="screen">
+	<link href="assets/css/animate.css" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -52,26 +52,25 @@
 	<section id="apply3" class="pfblock pfblock-gray formAll" >
 		<div class="container">
 			<div class="row">
-
+				<!-- FA icon -->
 				<div class="col s12 m12 l4 ">
               <span class="icon major style1 fa-user"></span>
 				</div>
 
+				<!-- Input -->
 				<div class="col s12 m12 l6 text-left">
           <br>
           <br>
 					<input  type="text" autofocus="autofocus" class="validate"
 					checked
-					onKeyDown="if(event.keyCode==13) location.href='#apply4';"
-					<label ><div class="question">What is your name?</div></label>
+					onKeyDown="if(event.keyCode==13) location.href='#apply4';" />
+					<label ><div class="question">Enter your campus</div></label>
 				</div>
 
 				<!--Progress Bar -->
-			<div class="col s12 m12 l12">
-        <br>
-        <br>
+			<div class="col s12 m12 l12"><br><br>
 			<div class="progress" style="height: 18px;">
-				<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="100" aria-valuemax="100">30%</div>
+				<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" >10%</div>
 			</div>
 			</div>
 
@@ -79,44 +78,6 @@
 		</div>
 	</section>
 	<!--  end -->
-
-
-	<!-- q4 BIRTHDAY-->
-  <section id="apply4" class="pfblock pfblock-gray formAll" >
-		<div class="container">
-			<div class="row">
-
-				<div class="col s12 m12 l6">
-              <span class="icon major style1 fa-user"></span>
-				</div>
-
-
-
-				<div class="col s12 m12 l6">
-
-					<input  type="text" class="validate"
-					checked
-					onKeyDown="if(event.keyCode==13) location.href='#apply4';"
-					<label ><div class="question">What is your name?</div></label>
-				</div>
-
-				<!--Progress Bar -->
-
-			<div class="col s12 m12 l12">
-			<div class="progress" style="height: 18px;">
-				<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="100" aria-valuemax="100">30%</div>
-			</div>
-			</div>
-
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section>
-
-
-
-
-
-
 
 
 
@@ -147,5 +108,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+	<script src="js/wow.min.js"></script>
+  <script>
+        new WOW().init();
+  </script>
 </body>
 </html>
