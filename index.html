@@ -74,6 +74,7 @@
 	</section>
 	<!--  end -->
 
+
 	<!-- major Start -->
 	<section id="apply2" class="pfblock pfblock-gray formAll" >
 		<div class="container">
@@ -84,18 +85,10 @@
 				</div>
 
 				<!-- Input -->
-				<div class="col s12 m12 l6 text-left">
-					<br>
-					<br>
-
-					<!-- <input  type="text" autofocus="autofocus" class="validate"
-					checked
-					onKeyDown="if(event.keyCode==13) location.href='#apply4';" /> -->
-
-
-					<form autocomplete="off">
+				<div class="col s12 m12 l6 text-left"><br><br>
+					<form autocomplete="off" onsubmit="return (validateForm());" >
 					  <div class="autocomplete" style="width:300px;">
-								<input id="myInput" type="text" placeholder="i.e. Computer Science">
+								<input id="myInput" type="text" placeholder="i.e. Computer Science" autofocus="autofocus">
 					  </div>
 					</form>
 
@@ -164,7 +157,7 @@
 	<script type="text/javascript">
 
 	function validateForm() {
-  var x = document.getElementById("fname").value;
+  var x = document.getElementById("myInput").value;
   if (x == "y") {
     alert("Name must be filled out");
     return false;
@@ -237,7 +230,7 @@ function autocomplete(inp, arr) {
         addActive(x);
       } else if (e.keyCode == 13) {
         /*If the ENTER key is pressed, prevent the form from being submitted,*/
-        e.preventDefault();
+        // e.preventDefault();
         if (currentFocus > -1) {
           /*and simulate a click on the "active" item:*/
           if (x) x[currentFocus].click();
