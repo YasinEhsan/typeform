@@ -20,6 +20,9 @@
 	<link href="assets/css/animate.css" rel="stylesheet" media="screen">
 
 	<style>
+	html {
+  scroll-behavior: smooth;
+}
 
 		/*when hovering an item:*/
 		.autocomplete-items div:hover {
@@ -33,46 +36,10 @@
 		}
 	</style>
 
-	<script type="text/javascript">
-
-	function validateForm() {
-  var x = document.getElementById("fname").value;
-  if (x == "y") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-	</script>
-
 </head>
 <body>
-
-
 	<!-- Navigation start -->
-	<!-- <header class="header">
-		<nav class="navbar navbar-custom" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Map</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="custom-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#apply0">Admin Login</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header> -->
 	<!-- Navigation end -->
-
-
 
 
 	<!-- Campus Start -->
@@ -88,9 +55,10 @@
 				<div class="col s12 m12 l6 text-left">
           <br>
           <br>
-					<input  type="text" autofocus="autofocus" class="validate"
-					checked
-					onKeyDown="if(event.keyCode==13) location.href='#apply2';" />
+					<form onsubmit="return (validateForm());">
+						<input  id="fname" type="text" autofocus="autofocus"/>
+					</form>
+
 					<label ><div class="question">Enter your campus</div></label>
 				</div>
 
@@ -123,12 +91,7 @@
 					<!-- <input  type="text" autofocus="autofocus" class="validate"
 					checked
 					onKeyDown="if(event.keyCode==13) location.href='#apply4';" /> -->
-					<form name="myForm" onsubmit="return validateForm()">
-						<div class="">
-								Name: <input type="text" name="fname">
-						</div>
 
-				</form>
 
 					<form autocomplete="off">
 					  <div class="autocomplete" style="width:300px;">
@@ -198,7 +161,21 @@
         new WOW().init();
   </script>
 
+	<script type="text/javascript">
 
+	function validateForm() {
+  var x = document.getElementById("fname").value;
+  if (x == "y") {
+    alert("Name must be filled out");
+    return false;
+  }
+	else{
+		// window.location.href = "apply2",true;
+		var y = document.getElementById("apply2");
+		y.scrollIntoView();
+	}
+}
+	</script>
 
 
 	<script>
