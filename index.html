@@ -32,8 +32,24 @@
 		  color: #ffffff;
 		}
 	</style>
+
+	<script type="text/javascript">
+
+	function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+	</script>
+
 </head>
 <body>
+	<section>
+
+	</section>
+
 
 	<!-- Navigation start -->
 	<!-- <header class="header">
@@ -110,15 +126,17 @@
 					<!-- <input  type="text" autofocus="autofocus" class="validate"
 					checked
 					onKeyDown="if(event.keyCode==13) location.href='#apply4';" /> -->
+					<!-- <form name="myForm" action="/action_page.php" onsubmit="return validateForm()">
+						<div class="">
+								Name: <input type="text" name="fname">
+						</div>
 
-					<form autocomplete="off" >
+				</form> -->
+
+					<form autocomplete="off" name="myForm" onsubmit="return validateForm()" >
 					  <div class="autocomplete" style="width:300px;">
-								<input id="myInput" type="text" name="myCountry" placeholder="i.e. Computer Science">
-
+								<input id="myInput" type="text" name="fname" placeholder="i.e. Computer Science">
 					  </div>
-
-
-
 					</form>
 
 					<label ><div class="question">Enter your Major</div></label>
@@ -130,7 +148,46 @@
 				<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" >10%</div>
 			</div>
 			</div>
+			</div>
+		</div>
+	</section>
+	<!--  end -->
 
+
+	<!-- major Start -->
+	<section id="apply3" class="pfblock pfblock-gray formAll" >
+		<div class="container">
+			<div class="row">
+				<!-- FA icon -->
+				<div class="col s12 m12 l4 ">
+							<span class="icon major style1 fa-user"></span>
+				</div>
+
+				<!-- Input -->
+				<div class="col s12 m12 l6 text-left">
+					<br>
+					<br>
+
+					<!-- <input  type="text" autofocus="autofocus" class="validate"
+					checked
+					onKeyDown="if(event.keyCode==13) location.href='#apply4';" /> -->
+
+					<form name="myForm" autocomplete="off" onsubmit="return validateForm()" >
+						<div class="autocomplete" style="width:300px;">
+								<input id="myInput2" type="text" name="myCountry" placeholder="i.e. Computer Science" checked
+								onKeyDown="if(event.keyCode==13) location.href='#apply3';">
+						</div>
+					</form>
+
+					<label ><div class="question">Enter your Start Date</div></label>
+				</div>
+
+				<!--Progress Bar -->
+			<div class="col s12 m12 l12"><br><br>
+			<div class="progress" style="height: 18px;">
+				<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" >10%</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	</section>
@@ -143,6 +200,9 @@
   <script>
         new WOW().init();
   </script>
+
+
+
 
 	<script>
 function autocomplete(inp, arr) {
@@ -235,6 +295,7 @@ function autocomplete(inp, arr) {
         x[i].parentNode.removeChild(x[i]);
       }
     }
+
   }
   /*execute a function when someone clicks in the document:*/
   document.addEventListener("click", function (e) {
@@ -247,6 +308,7 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
+autocomplete(document.getElementById("myInput2"), countries);
 </script>
 </body>
 </html>
